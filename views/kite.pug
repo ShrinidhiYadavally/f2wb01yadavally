@@ -6,8 +6,12 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each kite,index in kites
-        div(class="col-sm-2")  #{kite.kiteName} -  #{kite.kiteCost} - #{kite.quantityAvailable} 
-    
+       div(class="col-sm-2" onclick=`buy(${index})`)  #{kite.kiteName} -  #{kite.kiteCost} - #{kite.quantityAvailable} 
+    script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }     
  
 
 
